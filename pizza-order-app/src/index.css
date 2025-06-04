@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------- BASE ----------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf2e9;
+  color: #2e2e2e;
+}
+
+/* ----------- TITRES ----------- */
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+/* ----------- PAGE MENU ----------- */
+.menu-page {
+  padding: 4rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ----------- GRILLE DES PIZZAS ----------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* ----------- CARTE PIZZA ----------- */
+.pizza-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+  border: 1px solid #f3e5dc;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image pizza */
+.pizza-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #f3e5dc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Nom & ingrédients */
+.pizza-card h3 {
+  font-size: 1.25rem;
+  color: #6b4226;
+  margin-bottom: 0.3rem;
+}
+
+.pizza-card p {
+  font-size: 0.85rem;
+  color: #806c5a;
+  font-style: italic;
+  margin-bottom: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+/* ----------- BOUTONS DE TAILLE ----------- */
+.size-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.size-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #d8c2ae;
+  color: #6b4226;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.size-button:hover {
+  background-color: #f2e7da;
+}
+
+.size-button.active {
+  background-color: #6b4226;
+  color: #fff8f0;
+  border-color: #6b4226;
+}
+
+/* ----------- PRIX ----------- */
+.pizza-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8b5e34;
+  margin-bottom: 0.8rem;
+}
+
+/* ----------- BOUTON AJOUT PANIER ----------- */
+.add-button {
+  background-color: #ff8243;
+  color: white;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #e7682c;
+}

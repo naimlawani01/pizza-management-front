@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function CartPage() {
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
   const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
+  const navigate = useNavigate();
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
@@ -25,10 +27,7 @@ export default function CartPage() {
           <div className="mt-6 flex justify-between items-center">
             <p className="text-xl font-bold">Total : {total.toFixed(2)} €</p>
             <button
-              onClick={() => {
-                alert('Commande passée avec succès !');
-                clearCart();
-              }}
+              onClick={() => navigate('/livraison')}
               className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
             >
               Commander

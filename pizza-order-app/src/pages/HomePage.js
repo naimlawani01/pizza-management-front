@@ -7,21 +7,22 @@ import heroPhoto from '../assets/homepizz.jpg';
 
 function HomePage() {
   return (
-    <div className="homepage">
-
-      {/* Hero Image */}
-      <section 
+    <div className="homepage pt-20">
+      {/* Hero Section */}
+      <section
         className="hero-image"
         style={{ backgroundImage: `url(${heroPhoto})` }}
       >
         <div className="hero-text">
           <h1>PizzaTech</h1>
           <p>La passion de la vraie pizza italienne, livrée chez vous</p>
-          <button onClick={() => window.location.href = '/Menu'}>Commander Maintenant</button>
+          <button onClick={() => window.location.href = '/menu'}>
+            Commander Maintenant
+          </button>
         </div>
       </section>
 
-      {/* Menu */}
+      {/* Menu Section */}
       <section className="menu-section">
         <h2>Notre Menu</h2>
         <div className="menu-grid">
@@ -43,7 +44,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Pourquoi choisir PizzaTech ? */}
+      {/* Pourquoi nous choisir */}
       <section className="info-section">
         <h2>Pourquoi choisir PizzaTech ?</h2>
         <div className="features-grid">
@@ -85,14 +86,12 @@ function HomePage() {
             <div className="stars">⭐⭐⭐⭐⭐</div>
             <p>Les meilleures pizzas que j’ai goûtées ! Fraîcheur et cuisson parfaite. Je recommande à 100%.</p>
           </div>
-
           <div className="review-card">
             <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client 2" />
             <h4>Lucas D.</h4>
             <div className="stars">⭐⭐⭐⭐⭐</div>
             <p>Livraison ultra rapide et pizza toujours chaude. Un vrai délice, bravo à toute l’équipe.</p>
           </div>
-
           <div className="review-card">
             <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Cliente 3" />
             <h4>Emma L.</h4>
@@ -101,7 +100,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

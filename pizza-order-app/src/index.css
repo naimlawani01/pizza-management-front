@@ -4,10 +4,9 @@
 
 /* ----------- BASE ----------- */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdf2e9;
-  color: #2e2e2e;
+  @apply bg-red-500 text-white;
 }
+
 
 /* ----------- TITRES ----------- */
 h1, h2, h3 {
